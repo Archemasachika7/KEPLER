@@ -1,179 +1,490 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kepler – Empower the Next Generation of Coders</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kepler - Empowering the Next Generation of Coders</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
-  <!--===== HERO SECTION =====-->
-  <header class="hero-section">
-    <nav>
-      <div class="logo">🪐 KEPLER</div>
-      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
-      <ul class="nav-links">
-        <li><a href="#features">Why Kepler?</a></li>
-        <li><a href="#courses">Courses</a></li>
-        <li><a href="#community">Community</a></li>
-        <li><a href="#path">Kepler Path</a></li>
-      </ul>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="custom-logo">
+                    <img src="https://drive.google.com/uc?export=view&id=11JOmMoOkwinR6ExsXSCAMMK2sQ2j8xT7" alt="Kepler Logo" />
+                </div>
+                <span>Kepler</span>
+            </div>
+            <div class="loading-animation">
+                <div class="loading-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo" id="navLogo">
+                <div class="custom-logo">
+                    <img src="https://drive.google.com/uc?export=view&id=11JOmMoOkwinR6ExsXSCAMMK2sQ2j8xT7" alt="Kepler Logo" />
+                </div>
+                <span>Kepler</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#courses" class="nav-link">Courses</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#community" class="nav-link">Community</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="btn btn-outline">Login</button>
+                <button class="btn btn-primary">Sign Up</button>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <a href="#courses" class="mobile-nav-link">Courses</a>
+            <a href="#features" class="mobile-nav-link">Features</a>
+            <a href="#community" class="mobile-nav-link">Community</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+        </div>
     </nav>
-    <div class="hero-content">
-      <div class="planet-bg"></div>
-      <h1>Empowering the Next Generation of Coders.</h1>
-      <p>Where curiosity meets code, and potential becomes power.</p>
-      <div class="typing-wrap">
-        <span id="typing"></span>
-        <span class="cursor">|</span>
-      </div>
-      <div class="cta-buttons">
-        <a href="#signup" class="btn btn-primary">Get Started</a>
-        <a href="#courses" class="btn btn-secondary">Explore Courses</a>
-      </div>
-    </div>
-  </header>
 
-  <!--===== FEATURES =====-->
-  <section id="features" class="features-section">
-    <h2>Why Kepler?</h2>
-    <div class="features-grid">
-      <div class="feature-card">
-        <span class="feature-icon">💡</span>
-        <h3>Code-Centric Curriculum</h3>
-        <p>Learn by doing, with projects and real-world challenges.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">📈</span>
-        <h3>Progress Tracking</h3>
-        <p>Advance on your terms. Monitor your growth with clarity.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🚀</span>
-        <h3>From Basics to Internships</h3>
-        <p>Beginner to job-ready—guided, step-by-step learning.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">💬</span>
-        <h3>Mentor Support</h3>
-        <p>Instant help, live sessions, and a supportive network.</p>
-      </div>
-    </div>
-  </section>
+    <!-- Hero Section with Parallax -->
+    <section class="hero" id="hero">
+        <div class="parallax-container">
+            <!-- Background layers for parallax -->
+            <div class="parallax-layer" data-speed="0.1">
+                <div class="background-grid"></div>
+            </div>
+            <div class="parallax-layer" data-speed="0.3">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+            <div class="parallax-layer" data-speed="0.5">
+                <div class="orbit-system">
+                    <div class="orbit-ring orbit-1"></div>
+                    <div class="orbit-ring orbit-2"></div>
+                    <div class="orbit-ring orbit-3"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-content" id="heroContent">
+            <div class="hero-badge fade-in-up">
+                <span class="badge-icon">🚀</span>
+                <span>Join 50,000+ learners already coding their future</span>
+            </div>
+            
+            <!-- Animated Logo Section -->
+            <div class="hero-logo-container" id="heroLogo">
+                <div class="logo-zoom-container">
+                    <img src="https://drive.google.com/uc?export=view&id=11JOmMoOkwinR6ExsXSCAMMK2sQ2j8xT7" alt="Kepler Logo" class="hero-logo-image" />
+                    <div class="logo-glow"></div>
+                </div>
+            </div>
+            
+            <h1 class="hero-title fade-in-up">
+                Empowering the Next Generation of <span class="gradient-text">Coders</span>
+            </h1>
+            <p class="hero-subtitle fade-in-up">
+                Where curiosity meets code, and potential becomes power. Master programming with our AI-powered learning platform.
+            </p>
+            <div class="typing-animation fade-in-up">
+                <span>Learn </span>
+                <span class="typed-text"></span>
+                <span class="cursor">|</span>
+            </div>
+            <div class="hero-buttons fade-in-up">
+                <button class="btn btn-primary btn-large magnetic-btn" onclick="scrollToSection('courses')">
+                    <span>Get Started</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="btn btn-glass btn-large magnetic-btn" onclick="playDemoVideo()">
+                    <i class="fas fa-play"></i>
+                    <span>Watch Demo</span>
+                </button>
+            </div>
+            <div class="hero-stats fade-in-up">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50000">0</div>
+                    <div class="stat-label">Active Learners</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="95">0</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Companies Hiring</div>
+                </div>
+            </div>
+        </div>
 
-  <!--===== COURSES =====-->
-  <section id="courses" class="courses-section">
-    <h2>Popular Courses</h2>
-    <div class="course-filters">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="beginner">Beginner</button>
-      <button class="filter-btn" data-filter="intermediate">Intermediate</button>
-      <button class="filter-btn" data-filter="advanced">Advanced</button>
-    </div>
-    <div class="courses-grid">
-      <!-- Example course card -->
-      <div class="course-card beginner">
-        <div class="course-tags">Beginner • Frontend</div>
-        <h3>Intro to JavaScript</h3>
-        <div class="progress-bar"><div style="width:70%"></div></div>
-        <div class="stars">★★★☆☆</div>
-      </div>
-      <div class="course-card beginner">
-        <div class="course-tags">Beginner • DSA</div>
-        <h3>DSA Foundations</h3>
-        <div class="progress-bar"><div style="width:40%"></div></div>
-        <div class="stars">★★★☆☆</div>
-      </div>
-      <div class="course-card intermediate">
-        <div class="course-tags">Intermediate • AI/ML</div>
-        <h3>ML Bootcamp</h3>
-        <div class="progress-bar"><div style="width:60%"></div></div>
-        <div class="stars">★★★★☆</div>
-      </div>
-      <div class="course-card advanced">
-        <div class="course-tags">Advanced • Internship Prep</div>
-        <h3>Crack Your First Internship</h3>
-        <div class="progress-bar"><div style="width:80%"></div></div>
-        <div class="stars">★★★★★</div>
-      </div>
-      <!-- Add more card as needed -->
-    </div>
-  </section>
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" id="scrollIndicator">
+            <div class="scroll-text">Scroll to explore</div>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
 
-  <!--===== COMMUNITY =====-->
-  <section id="community" class="community-section">
-    <h2>KeplerVerse Community</h2>
-    <div class="testimonials-carousel">
-      <div class="testimonial active">
-        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Student photo" />
-        <div>
-          <p>"Landed my dream internship at Amazon thanks to Kepler's DSA roadmap!"</p>
-          <span class="badge">Amazon Intern</span>
+    <!-- Logo Zoom Transition Section -->
+    <section class="logo-zoom-section" id="logoZoomSection">
+        <div class="zoom-container">
+            <div class="zoom-logo">
+                <img src="https://drive.google.com/uc?export=view&id=11JOmMoOkwinR6ExsXSCAMMK2sQ2j8xT7" alt="Kepler Logo" />
+            </div>
+            <div class="zoom-content">
+                <h2>Welcome to the Future of Learning</h2>
+                <p>Experience education reimagined</p>
+            </div>
         </div>
-      </div>
-      <div class="testimonial">
-        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Student photo" />
-        <div>
-          <p>"Mentors answered every doubt. I'm much more confident now."</p>
-          <span class="badge">Top Performer</span>
-        </div>
-      </div>
-      <div class="testimonial">
-        <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Student photo" />
-        <div>
-          <p>"Joined for frontend, stayed for the community."</p>
-          <span class="badge">Community Star</span>
-        </div>
-      </div>
-      <!-- Add more testimonials as needed -->
-    </div>
-    <div class="community-cta">
-      <a href="https://discord.com/" class="btn btn-discord" target="_blank">Join the KeplerVerse on Discord →</a>
-      <p>10,000+ learners. Study, code, win—together!</p>
-    </div>
-  </section>
+    </section>
 
-  <!--===== PATH (Gamification) =====-->
-  <section id="path" class="path-section">
-    <h2>The Kepler Path</h2>
-    <div class="path-steps">
-      <div class="path-step unlocked">
-        <span class="path-icon">🚧</span>
-        <div>
-          <h3>Lay the Foundation</h3>
-          <span>Coding Basics</span>
+    <!-- Features Section with Parallax -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title parallax-text">Why Choose Kepler?</h2>
+                <p class="section-subtitle parallax-text">Revolutionary features that set us apart from traditional learning platforms</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card magnetic-element" data-tilt>
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>AI-Powered Learning</h3>
+                    <p>Personalized curriculum that adapts to your learning style and pace with advanced machine learning algorithms.</p>
+                    <div class="feature-link">
+                        <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="feature-card magnetic-element" data-tilt>
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Real-time Code Review</h3>
+                    <p>Get instant feedback on your code with our advanced AI that understands context and provides personalized suggestions.</p>
+                    <div class="feature-link">
+                        <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="feature-card magnetic-element" data-tilt>
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Industry Partnerships</h3>
+                    <p>Direct pathways to internships at top tech companies through our exclusive partnership network.</p>
+                    <div class="feature-link">
+                        <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="feature-card magnetic-element" data-tilt>
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>24/7 Expert Mentorship</h3>
+                    <p>Access to industry veterans and coding experts who provide guidance whenever you need it.</p>
+                    <div class="feature-link">
+                        <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="path-step">
-        <span class="path-icon">⚙️</span>
-        <div>
-          <h3>Master the Craft</h3>
-          <span>DSA, Projects</span>
-        </div>
-      </div>
-      <div class="path-step">
-        <span class="path-icon">🎯</span>
-        <div>
-          <h3>Showcase & Apply</h3>
-          <span>Resume, GitHub</span>
-        </div>
-      </div>
-      <div class="path-step">
-        <span class="path-icon">💼</span>
-        <div>
-          <h3>Land Internships</h3>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!--===== CTA / SIGNUP =====-->
-  <footer class="cta-section" id="signup">
-    <h2>Ready to Launch Your Coding Journey?</h2>
-    <p>Join thousands of learners building their future with Kepler.</p>
-    <a href="#" class="btn btn-primary">Sign Up Now →</a>
-  </footer>
+    <!-- Interactive Demo Section -->
+    <section class="interactive-demo parallax-section">
+        <div class="container">
+            <div class="demo-content">
+                <div class="demo-text">
+                    <h2 class="parallax-text">Experience Kepler's Interactive IDE</h2>
+                    <p class="parallax-text">Try our advanced code editor with real-time collaboration, AI assistance, and instant feedback.</p>
+                    <div class="demo-features">
+                        <div class="demo-feature fade-in-left">
+                            <i class="fas fa-check"></i>
+                            <span>Syntax highlighting for 20+ languages</span>
+                        </div>
+                        <div class="demo-feature fade-in-left">
+                            <i class="fas fa-check"></i>
+                            <span>Real-time error detection</span>
+                        </div>
+                        <div class="demo-feature fade-in-left">
+                            <i class="fas fa-check"></i>
+                            <span>AI-powered code completion</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-editor magnetic-element">
+                    <div class="editor-header">
+                        <div class="editor-tabs">
+                            <div class="tab active">main.js</div>
+                            <div class="tab">style.css</div>
+                            <div class="tab">index.html</div>
+                        </div>
+                        <div class="editor-actions">
+                            <button class="run-btn magnetic-btn"><i class="fas fa-play"></i> Run</button>
+                        </div>
+                    </div>
+                    <div class="editor-content">
+                        <div class="line-numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                        </div>
+                        <div class="code-area">
+                            <div class="code-line"><span class="keyword">function</span> <span class="function">greetUser</span>(<span class="parameter">name</span>) {</div>
+                            <div class="code-line">  <span class="keyword">const</span> <span class="variable">message</span> = <span class="string">`Hello, ${name}!`</span>;</div>
+                            <div class="code-line">  <span class="function">console</span>.<span class="method">log</span>(<span class="variable">message</span>);</div>
+                            <div class="code-line">  <span class="keyword">return</span> <span class="variable">message</span>;</div>
+                            <div class="code-line">}</div>
+                            <div class="code-line typing-demo"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- Courses Section -->
+    <section class="courses parallax-section" id="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title parallax-text">Popular Learning Paths</h2>
+                <p class="section-subtitle parallax-text">Structured curriculums designed by industry experts</p>
+            </div>
+            <div class="course-filters">
+                <button class="filter-btn active magnetic-btn" data-filter="all">All Courses</button>
+                <button class="filter-btn magnetic-btn" data-filter="beginner">Beginner</button>
+                <button class="filter-btn magnetic-btn" data-filter="intermediate">Intermediate</button>
+                <button class="filter-btn magnetic-btn" data-filter="advanced">Advanced</button>
+            </div>
+            <div class="courses-grid">
+                <!-- Course cards with your existing content but enhanced animations -->
+                <div class="course-card magnetic-element" data-level="beginner">
+                    <div class="course-image">
+                        <i class="fab fa-js-square"></i>
+                        <div class="course-overlay">
+                            <button class="preview-btn magnetic-btn">Preview Course</button>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <!-- Your existing course content -->
+                        <div class="course-header">
+                            <div class="course-tags">
+                                <span class="tag tag-beginner">Beginner</span>
+                                <span class="tag tag-frontend">Frontend</span>
+                            </div>
+                            <div class="course-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>8 weeks</span>
+                            </div>
+                        </div>
+                        <h3>JavaScript Mastery</h3>
+                        <p>From basics to advanced concepts including ES6+, DOM manipulation, and modern frameworks.</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0"></div>
+                            </div>
+                            <span class="progress-text">0/42 lessons</span>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.9 (2.1k)</span>
+                            </div>
+                            <div class="course-price">
+                                <span class="price-original">$299</span>
+                                <span class="price-current">$199</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary course-btn magnetic-btn">Start Learning</button>
+                    </div>
+                </div>
+                
+                <!-- Add more course cards similarly -->
+                <div class="course-card magnetic-element featured" data-level="advanced">
+                    <div class="featured-badge">
+                        <i class="fas fa-crown"></i>
+                        <span>Most Popular</span>
+                    </div>
+                    <div class="course-image">
+                        <i class="fab fa-react"></i>
+                        <div class="course-overlay">
+                            <button class="preview-btn magnetic-btn">Preview Course</button>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-header">
+                            <div class="course-tags">
+                                <span class="tag tag-advanced">Advanced</span>
+                                <span class="tag tag-fullstack">Full Stack</span>
+                            </div>
+                            <div class="course-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>16 weeks</span>
+                            </div>
+                        </div>
+                        <h3>Full Stack Development Bootcamp</h3>
+                        <p>Complete web development with React, Node.js, MongoDB, and deployment strategies.</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0"></div>
+                            </div>
+                            <span class="progress-text">0/86 lessons</span>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.9 (3.2k)</span>
+                            </div>
+                            <div class="course-price">
+                                <span class="price-original">$599</span>
+                                <span class="price-current">$399</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary course-btn magnetic-btn">Start Learning</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section parallax-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2 class="parallax-text">Ready to Transform Your Future?</h2>
+                    <p class="parallax-text">Join 50,000+ developers who chose Kepler to accelerate their coding careers</p>
+                    <div class="cta-benefits">
+                        <div class="benefit fade-in-left">
+                            <i class="fas fa-check"></i>
+                            <span>30-day money-back guarantee</span>
+                        </div>
+                        <div class="benefit fade-in-left">
+                            <i class="fas fa-check"></i>
+                            <span>Lifetime access to content</span>
+                        </div>
+                        <div class="benefit fade-in-left">
+                            <i class="fas fa-check"></i>
+                            <span>1-on-1 mentor sessions</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta-action">
+                    <button class="btn btn-cta magnetic-btn">
+                        <span>Start Your Journey</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <p class="cta-note">No credit card required • Start with free courses</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="custom-logo">
+                            <img src="https://drive.google.com/uc?export=view&id=11JOmMoOkwinR6ExsXSCAMMK2sQ2j8xT7" alt="Kepler Logo" />
+                        </div>
+                        <span>Kepler</span>
+                    </div>
+                    <p>Empowering the next generation of coders with cutting-edge technology and personalized learning experiences.</p>
+                    <div class="footer-social">
+                        <a href="#" class="magnetic-element"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="magnetic-element"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="magnetic-element"><i class="fab fa-github"></i></a>
+                        <a href="#" class="magnetic-element"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Courses</h3>
+                    <ul>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">React</a></li>
+                        <li><a href="#">Data Structures</a></li>
+                        <li><a href="#">Machine Learning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press Kit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Status</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kepler. All rights reserved. Built with ❤️ for developers worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
