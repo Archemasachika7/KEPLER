@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kepler – Empower the Next Generation of Coders</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!--===== HERO SECTION =====-->
+  <header class="hero-section">
+    <nav>
+      <div class="logo">🪐 KEPLER</div>
+      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <ul class="nav-links">
+        <li><a href="#features">Why Kepler?</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#path">Kepler Path</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <div class="planet-bg"></div>
+      <h1>Empowering the Next Generation of Coders.</h1>
+      <p>Where curiosity meets code, and potential becomes power.</p>
+      <div class="typing-wrap">
+        <span id="typing"></span>
+        <span class="cursor">|</span>
+      </div>
+      <div class="cta-buttons">
+        <a href="#signup" class="btn btn-primary">Get Started</a>
+        <a href="#courses" class="btn btn-secondary">Explore Courses</a>
+      </div>
+    </div>
+  </header>
+
+  <!--===== FEATURES =====-->
+  <section id="features" class="features-section">
+    <h2>Why Kepler?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon">💡</span>
+        <h3>Code-Centric Curriculum</h3>
+        <p>Learn by doing, with projects and real-world challenges.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">📈</span>
+        <h3>Progress Tracking</h3>
+        <p>Advance on your terms. Monitor your growth with clarity.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🚀</span>
+        <h3>From Basics to Internships</h3>
+        <p>Beginner to job-ready—guided, step-by-step learning.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">💬</span>
+        <h3>Mentor Support</h3>
+        <p>Instant help, live sessions, and a supportive network.</p>
+      </div>
+    </div>
+  </section>
+
+  <!--===== COURSES =====-->
+  <section id="courses" class="courses-section">
+    <h2>Popular Courses</h2>
+    <div class="course-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="beginner">Beginner</button>
+      <button class="filter-btn" data-filter="intermediate">Intermediate</button>
+      <button class="filter-btn" data-filter="advanced">Advanced</button>
+    </div>
+    <div class="courses-grid">
+      <!-- Example course card -->
+      <div class="course-card beginner">
+        <div class="course-tags">Beginner • Frontend</div>
+        <h3>Intro to JavaScript</h3>
+        <div class="progress-bar"><div style="width:70%"></div></div>
+        <div class="stars">★★★☆☆</div>
+      </div>
+      <div class="course-card beginner">
+        <div class="course-tags">Beginner • DSA</div>
+        <h3>DSA Foundations</h3>
+        <div class="progress-bar"><div style="width:40%"></div></div>
+        <div class="stars">★★★☆☆</div>
+      </div>
+      <div class="course-card intermediate">
+        <div class="course-tags">Intermediate • AI/ML</div>
+        <h3>ML Bootcamp</h3>
+        <div class="progress-bar"><div style="width:60%"></div></div>
+        <div class="stars">★★★★☆</div>
+      </div>
+      <div class="course-card advanced">
+        <div class="course-tags">Advanced • Internship Prep</div>
+        <h3>Crack Your First Internship</h3>
+        <div class="progress-bar"><div style="width:80%"></div></div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <!-- Add more card as needed -->
+    </div>
+  </section>
+
+  <!--===== COMMUNITY =====-->
+  <section id="community" class="community-section">
+    <h2>KeplerVerse Community</h2>
+    <div class="testimonials-carousel">
+      <div class="testimonial active">
+        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Student photo" />
+        <div>
+          <p>"Landed my dream internship at Amazon thanks to Kepler's DSA roadmap!"</p>
+          <span class="badge">Amazon Intern</span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Student photo" />
+        <div>
+          <p>"Mentors answered every doubt. I'm much more confident now."</p>
+          <span class="badge">Top Performer</span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Student photo" />
+        <div>
+          <p>"Joined for frontend, stayed for the community."</p>
+          <span class="badge">Community Star</span>
+        </div>
+      </div>
+      <!-- Add more testimonials as needed -->
+    </div>
+    <div class="community-cta">
+      <a href="https://discord.com/" class="btn btn-discord" target="_blank">Join the KeplerVerse on Discord →</a>
+      <p>10,000+ learners. Study, code, win—together!</p>
+    </div>
+  </section>
+
+  <!--===== PATH (Gamification) =====-->
+  <section id="path" class="path-section">
+    <h2>The Kepler Path</h2>
+    <div class="path-steps">
+      <div class="path-step unlocked">
+        <span class="path-icon">🚧</span>
+        <div>
+          <h3>Lay the Foundation</h3>
+          <span>Coding Basics</span>
+        </div>
+      </div>
+      <div class="path-step">
+        <span class="path-icon">⚙️</span>
+        <div>
+          <h3>Master the Craft</h3>
+          <span>DSA, Projects</span>
+        </div>
+      </div>
+      <div class="path-step">
+        <span class="path-icon">🎯</span>
+        <div>
+          <h3>Showcase & Apply</h3>
+          <span>Resume, GitHub</span>
+        </div>
+      </div>
+      <div class="path-step">
+        <span class="path-icon">💼</span>
+        <div>
+          <h3>Land Internships</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--===== CTA / SIGNUP =====-->
+  <footer class="cta-section" id="signup">
+    <h2>Ready to Launch Your Coding Journey?</h2>
+    <p>Join thousands of learners building their future with Kepler.</p>
+    <a href="#" class="btn btn-primary">Sign Up Now →</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
