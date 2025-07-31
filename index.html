@@ -7,17 +7,13 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
         <div class="loading-content">
             <div class="loading-logo">
-                <div class="custom-logo">
-                    <img src="https://drive.google.com/uc?export=view&id=11JOmMoOkwinR6ExsXSCAMMK2sQ2j8xT7" alt="Kepler Logo" />
-                </div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/mochi-4436f.firebasestorage.app/o/kepler%20logo.jpg?alt=media&token=7df41f3c-26f2-4596-850c-d81538dc86dfuse" alt="Kepler Logo" />
                 <span>Kepler</span>
             </div>
             <div class="loading-animation">
@@ -33,10 +29,8 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo" id="navLogo">
-                <div class="custom-logo">
-                    <img src="https://drive.google.com/uc?export=view&id=11JOmMoOkwinR6ExsXSCAMMK2sQ2j8xT7" alt="Kepler Logo" />
-                </div>
+            <div class="nav-logo">
+                <img src="https://firebasestorage.googleapis.com/v0/b/mochi-4436f.firebasestorage.app/o/kepler%20logo.jpg?alt=media&token=7df41f3c-26f2-4596-850c-d81538dc86dfuse" alt="Kepler Logo" class="logo-img" />
                 <span>Kepler</span>
             </div>
             <div class="nav-menu">
@@ -58,76 +52,68 @@
                 <span></span>
             </div>
         </div>
-        <!-- Mobile Menu -->
-        <div class="mobile-menu">
-            <a href="#courses" class="mobile-nav-link">Courses</a>
-            <a href="#features" class="mobile-nav-link">Features</a>
-            <a href="#community" class="mobile-nav-link">Community</a>
-            <a href="#about" class="mobile-nav-link">About</a>
-        </div>
     </nav>
 
-    <!-- Hero Section with Parallax -->
+    <!-- Hero Section -->
     <section class="hero" id="hero">
-        <div class="parallax-container">
-            <!-- Background layers for parallax -->
-            <div class="parallax-layer" data-speed="0.1">
-                <div class="background-grid"></div>
+        <!-- Parallax Background Layers -->
+        <div class="parallax-bg">
+            <div class="bg-layer" data-speed="0.1">
+                <div class="space-grid"></div>
             </div>
-            <div class="parallax-layer" data-speed="0.3">
-                <div class="floating-shapes">
-                    <div class="shape shape-1"></div>
-                    <div class="shape shape-2"></div>
-                    <div class="shape shape-3"></div>
+            <div class="bg-layer" data-speed="0.3">
+                <div class="floating-particles">
+                    <div class="particle particle-1"></div>
+                    <div class="particle particle-2"></div>
+                    <div class="particle particle-3"></div>
+                    <div class="particle particle-4"></div>
+                    <div class="particle particle-5"></div>
                 </div>
             </div>
-            <div class="parallax-layer" data-speed="0.5">
-                <div class="orbit-system">
-                    <div class="orbit-ring orbit-1"></div>
-                    <div class="orbit-ring orbit-2"></div>
-                    <div class="orbit-ring orbit-3"></div>
+            <div class="bg-layer" data-speed="0.5">
+                <div class="orbit-rings">
+                    <div class="orbit-ring ring-1"></div>
+                    <div class="orbit-ring ring-2"></div>
+                    <div class="orbit-ring ring-3"></div>
                 </div>
             </div>
         </div>
-        
-        <div class="hero-content" id="heroContent">
-            <div class="hero-badge fade-in-up">
-                <span class="badge-icon">🚀</span>
-                <span>Join 50,000+ learners already coding their future</span>
-            </div>
-            
-            <!-- Animated Logo Section -->
-            <div class="hero-logo-container" id="heroLogo">
-                <div class="logo-zoom-container">
-                    <img src="https://drive.google.com/uc?export=view&id=11JOmMoOkwinR6ExsXSCAMMK2sQ2j8xT7" alt="Kepler Logo" class="hero-logo-image" />
+
+        <div class="hero-content">
+            <!-- Hero Logo with Zoom Effect -->
+            <div class="hero-logo-section" id="heroLogo">
+                <div class="logo-container">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/mochi-4436f.firebasestorage.app/o/kepler%20logo.jpg?alt=media&token=7df41f3c-26f2-4596-850c-d81538dc86dfuse" alt="Kepler Logo" class="hero-logo" />
                     <div class="logo-glow"></div>
                 </div>
             </div>
-            
-            <h1 class="hero-title fade-in-up">
+
+            <h1 class="hero-title">
                 Empowering the Next Generation of <span class="gradient-text">Coders</span>
             </h1>
-            <p class="hero-subtitle fade-in-up">
-                Where curiosity meets code, and potential becomes power. Master programming with our AI-powered learning platform.
+            <p class="hero-subtitle">
+                Where curiosity meets code, and potential becomes power.
             </p>
-            <div class="typing-animation fade-in-up">
+            <div class="typing-animation">
                 <span>Learn </span>
                 <span class="typed-text"></span>
                 <span class="cursor">|</span>
             </div>
-            <div class="hero-buttons fade-in-up">
+            <div class="hero-buttons">
                 <button class="btn btn-primary btn-large magnetic-btn" onclick="scrollToSection('courses')">
                     <span>Get Started</span>
+                    <i class="fas fa-rocket"></i>
+                </button>
+                <button class="btn btn-glass btn-large magnetic-btn">
+                    <span>Explore Courses</span>
                     <i class="fas fa-arrow-right"></i>
                 </button>
-                <button class="btn btn-glass btn-large magnetic-btn" onclick="playDemoVideo()">
-                    <i class="fas fa-play"></i>
-                    <span>Watch Demo</span>
-                </button>
             </div>
-            <div class="hero-stats fade-in-up">
+            
+            <!-- Hero Stats -->
+            <div class="hero-stats">
                 <div class="stat-item">
-                    <div class="stat-number" data-target="50000">0</div>
+                    <div class="stat-number" data-target="10000">0</div>
                     <div class="stat-label">Active Learners</div>
                 </div>
                 <div class="stat-divider"></div>
@@ -144,57 +130,38 @@
         </div>
 
         <!-- Scroll Indicator -->
-        <div class="scroll-indicator" id="scrollIndicator">
-            <div class="scroll-text">Scroll to explore</div>
-            <div class="scroll-arrow">
-                <i class="fas fa-chevron-down"></i>
-            </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
-    <!-- Logo Zoom Transition Section -->
-    <section class="logo-zoom-section" id="logoZoomSection">
-        <div class="zoom-container">
-            <div class="zoom-logo">
-                <img src="https://drive.google.com/uc?export=view&id=11JOmMoOkwinR6ExsXSCAMMK2sQ2j8xT7" alt="Kepler Logo" />
-            </div>
-            <div class="zoom-content">
-                <h2>Welcome to the Future of Learning</h2>
-                <p>Experience education reimagined</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section with Parallax -->
-    <section class="features" id="features">
+    <!-- Features Section -->
+    <section class="features parallax-section" id="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title parallax-text">Why Choose Kepler?</h2>
-                <p class="section-subtitle parallax-text">Revolutionary features that set us apart from traditional learning platforms</p>
+                <h2 class="section-title">Why Choose Kepler?</h2>
+                <p class="section-subtitle">Revolutionary features that transform how you learn to code</p>
             </div>
             <div class="features-grid">
-                <div class="feature-card magnetic-element" data-tilt>
-                    <div class="feature-icon">
-                        <i class="fas fa-brain"></i>
-                        <div class="icon-glow"></div>
-                    </div>
-                    <h3>AI-Powered Learning</h3>
-                    <p>Personalized curriculum that adapts to your learning style and pace with advanced machine learning algorithms.</p>
-                    <div class="feature-link">
-                        <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
                 <div class="feature-card magnetic-element" data-tilt>
                     <div class="feature-icon">
                         <i class="fas fa-code"></i>
                         <div class="icon-glow"></div>
                     </div>
-                    <h3>Real-time Code Review</h3>
-                    <p>Get instant feedback on your code with our advanced AI that understands context and provides personalized suggestions.</p>
-                    <div class="feature-link">
-                        <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <h3>Code-Centric Curriculum</h3>
+                    <p>Practical learning over theory. Build real projects from day one with hands-on coding experience.</p>
+                    <div class="card-glow"></div>
+                </div>
+                
+                <div class="feature-card magnetic-element" data-tilt>
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="icon-glow"></div>
                     </div>
+                    <h3>Structured Progress Tracking</h3>
+                    <p>Learn at your pace with clear milestones, achievement badges, and personalized learning paths.</p>
+                    <div class="card-glow"></div>
                 </div>
                 
                 <div class="feature-card magnetic-element" data-tilt>
@@ -202,11 +169,9 @@
                         <i class="fas fa-rocket"></i>
                         <div class="icon-glow"></div>
                     </div>
-                    <h3>Industry Partnerships</h3>
-                    <p>Direct pathways to internships at top tech companies through our exclusive partnership network.</p>
-                    <div class="feature-link">
-                        <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
+                    <h3>From Basics to Internships</h3>
+                    <p>Complete journey for all levels, from coding fundamentals to landing your dream tech job.</p>
+                    <div class="card-glow"></div>
                 </div>
                 
                 <div class="feature-card magnetic-element" data-tilt>
@@ -214,67 +179,9 @@
                         <i class="fas fa-users"></i>
                         <div class="icon-glow"></div>
                     </div>
-                    <h3>24/7 Expert Mentorship</h3>
-                    <p>Access to industry veterans and coding experts who provide guidance whenever you need it.</p>
-                    <div class="feature-link">
-                        <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Demo Section -->
-    <section class="interactive-demo parallax-section">
-        <div class="container">
-            <div class="demo-content">
-                <div class="demo-text">
-                    <h2 class="parallax-text">Experience Kepler's Interactive IDE</h2>
-                    <p class="parallax-text">Try our advanced code editor with real-time collaboration, AI assistance, and instant feedback.</p>
-                    <div class="demo-features">
-                        <div class="demo-feature fade-in-left">
-                            <i class="fas fa-check"></i>
-                            <span>Syntax highlighting for 20+ languages</span>
-                        </div>
-                        <div class="demo-feature fade-in-left">
-                            <i class="fas fa-check"></i>
-                            <span>Real-time error detection</span>
-                        </div>
-                        <div class="demo-feature fade-in-left">
-                            <i class="fas fa-check"></i>
-                            <span>AI-powered code completion</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="demo-editor magnetic-element">
-                    <div class="editor-header">
-                        <div class="editor-tabs">
-                            <div class="tab active">main.js</div>
-                            <div class="tab">style.css</div>
-                            <div class="tab">index.html</div>
-                        </div>
-                        <div class="editor-actions">
-                            <button class="run-btn magnetic-btn"><i class="fas fa-play"></i> Run</button>
-                        </div>
-                    </div>
-                    <div class="editor-content">
-                        <div class="line-numbers">
-                            <span>1</span>
-                            <span>2</span>
-                            <span>3</span>
-                            <span>4</span>
-                            <span>5</span>
-                            <span>6</span>
-                        </div>
-                        <div class="code-area">
-                            <div class="code-line"><span class="keyword">function</span> <span class="function">greetUser</span>(<span class="parameter">name</span>) {</div>
-                            <div class="code-line">  <span class="keyword">const</span> <span class="variable">message</span> = <span class="string">`Hello, ${name}!`</span>;</div>
-                            <div class="code-line">  <span class="function">console</span>.<span class="method">log</span>(<span class="variable">message</span>);</div>
-                            <div class="code-line">  <span class="keyword">return</span> <span class="variable">message</span>;</div>
-                            <div class="code-line">}</div>
-                            <div class="code-line typing-demo"></div>
-                        </div>
-                    </div>
+                    <h3>Mentor Support + Live Doubts</h3>
+                    <p>24/7 expert mentorship, live doubt sessions, and a supportive community always with you.</p>
+                    <div class="card-glow"></div>
                 </div>
             </div>
         </div>
@@ -284,112 +191,311 @@
     <section class="courses parallax-section" id="courses">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title parallax-text">Popular Learning Paths</h2>
-                <p class="section-subtitle parallax-text">Structured curriculums designed by industry experts</p>
+                <h2 class="section-title">Popular Learning Paths</h2>
+                <p class="section-subtitle">Master coding with our structured, industry-aligned curricula</p>
             </div>
+            
+            <!-- Course Filters -->
             <div class="course-filters">
-                <button class="filter-btn active magnetic-btn" data-filter="all">All Courses</button>
+                <button class="filter-btn active magnetic-btn" data-filter="all">All</button>
                 <button class="filter-btn magnetic-btn" data-filter="beginner">Beginner</button>
                 <button class="filter-btn magnetic-btn" data-filter="intermediate">Intermediate</button>
                 <button class="filter-btn magnetic-btn" data-filter="advanced">Advanced</button>
             </div>
+            
+            <!-- Courses Grid -->
             <div class="courses-grid">
-                <!-- Course cards with your existing content but enhanced animations -->
                 <div class="course-card magnetic-element" data-level="beginner">
                     <div class="course-image">
                         <i class="fab fa-js-square"></i>
                         <div class="course-overlay">
-                            <button class="preview-btn magnetic-btn">Preview Course</button>
+                            <span class="course-level">Beginner</span>
                         </div>
                     </div>
                     <div class="course-content">
-                        <!-- Your existing course content -->
-                        <div class="course-header">
-                            <div class="course-tags">
-                                <span class="tag tag-beginner">Beginner</span>
-                                <span class="tag tag-frontend">Frontend</span>
-                            </div>
-                            <div class="course-duration">
-                                <i class="fas fa-clock"></i>
-                                <span>8 weeks</span>
-                            </div>
+                        <div class="course-tags">
+                            <span class="tag tag-beginner">Beginner</span>
+                            <span class="tag tag-frontend">Frontend</span>
                         </div>
-                        <h3>JavaScript Mastery</h3>
-                        <p>From basics to advanced concepts including ES6+, DOM manipulation, and modern frameworks.</p>
+                        <h3>JavaScript Fundamentals</h3>
+                        <p>Master modern JavaScript from basics to advanced concepts</p>
                         <div class="course-progress">
                             <div class="progress-bar">
                                 <div class="progress-fill" data-progress="0"></div>
                             </div>
-                            <span class="progress-text">0/42 lessons</span>
+                            <span>0/24 lessons</span>
                         </div>
                         <div class="course-footer">
                             <div class="course-rating">
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <span>4.9 (2.1k)</span>
+                                <div class="stars">★★★★★</div>
+                                <span>4.8 (1.2k)</span>
                             </div>
-                            <div class="course-price">
-                                <span class="price-original">$299</span>
-                                <span class="price-current">$199</span>
-                            </div>
+                            <div class="course-price">Free</div>
                         </div>
-                        <button class="btn btn-primary course-btn magnetic-btn">Start Learning</button>
                     </div>
                 </div>
-                
-                <!-- Add more course cards similarly -->
+
+                <div class="course-card magnetic-element" data-level="intermediate">
+                    <div class="course-image">
+                        <i class="fas fa-project-diagram"></i>
+                        <div class="course-overlay">
+                            <span class="course-level">Intermediate</span>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-tags">
+                            <span class="tag tag-intermediate">Intermediate</span>
+                            <span class="tag tag-dsa">DSA</span>
+                        </div>
+                        <h3>Data Structures & Algorithms</h3>
+                        <p>Problem-solving skills for technical interviews</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0"></div>
+                            </div>
+                            <span>0/36 lessons</span>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-rating">
+                                <div class="stars">★★★★★</div>
+                                <span>4.9 (856)</span>
+                            </div>
+                            <div class="course-price">$99</div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="course-card magnetic-element featured" data-level="advanced">
                     <div class="featured-badge">
                         <i class="fas fa-crown"></i>
                         <span>Most Popular</span>
                     </div>
                     <div class="course-image">
-                        <i class="fab fa-react"></i>
+                        <i class="fas fa-brain"></i>
                         <div class="course-overlay">
-                            <button class="preview-btn magnetic-btn">Preview Course</button>
+                            <span class="course-level">Advanced</span>
                         </div>
                     </div>
                     <div class="course-content">
-                        <div class="course-header">
-                            <div class="course-tags">
-                                <span class="tag tag-advanced">Advanced</span>
-                                <span class="tag tag-fullstack">Full Stack</span>
-                            </div>
-                            <div class="course-duration">
-                                <i class="fas fa-clock"></i>
-                                <span>16 weeks</span>
-                            </div>
+                        <div class="course-tags">
+                            <span class="tag tag-advanced">Advanced</span>
+                            <span class="tag tag-ai">AI/ML</span>
                         </div>
-                        <h3>Full Stack Development Bootcamp</h3>
-                        <p>Complete web development with React, Node.js, MongoDB, and deployment strategies.</p>
+                        <h3>Machine Learning Fundamentals</h3>
+                        <p>Introduction to AI and machine learning concepts</p>
                         <div class="course-progress">
                             <div class="progress-bar">
                                 <div class="progress-fill" data-progress="0"></div>
                             </div>
-                            <span class="progress-text">0/86 lessons</span>
+                            <span>0/28 lessons</span>
                         </div>
                         <div class="course-footer">
                             <div class="course-rating">
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <span>4.9 (3.2k)</span>
+                                <div class="stars">★★★★☆</div>
+                                <span>4.7 (432)</span>
                             </div>
-                            <div class="course-price">
-                                <span class="price-original">$599</span>
-                                <span class="price-current">$399</span>
+                            <div class="course-price">$199</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card magnetic-element" data-level="intermediate">
+                    <div class="course-image">
+                        <i class="fas fa-briefcase"></i>
+                        <div class="course-overlay">
+                            <span class="course-level">Intermediate</span>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-tags">
+                            <span class="tag tag-intermediate">Intermediate</span>
+                            <span class="tag tag-internship">Internship Prep</span>
+                        </div>
+                        <h3>Internship Preparation</h3>
+                        <p>Resume building, interview prep, and job search strategies</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0"></div>
+                            </div>
+                            <span>0/18 lessons</span>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-rating">
+                                <div class="stars">★★★★★</div>
+                                <span>4.9 (672)</span>
+                            </div>
+                            <div class="course-price">$79</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="community parallax-section" id="community">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Join 10,000+ learners in the KeplerVerse</h2>
+                <p class="section-subtitle">Connect with passionate developers worldwide</p>
+            </div>
+            
+            <!-- Testimonials Carousel -->
+            <div class="testimonials-carousel">
+                <div class="testimonial-card magnetic-element">
+                    <div class="testimonial-content">
+                        <p>"Kepler's hands-on approach helped me land my internship at Amazon. The mentorship was incredible!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b123?w=60&h=60&fit=crop&crop=face" alt="Sarah">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Chen</h4>
+                            <div class="achievement-badge">
+                                <i class="fas fa-briefcase"></i>
+                                <span>Landed internship at Amazon</span>
                             </div>
                         </div>
-                        <button class="btn btn-primary course-btn magnetic-btn">Start Learning</button>
+                    </div>
+                </div>
+
+                <div class="testimonial-card magnetic-element">
+                    <div class="testimonial-content">
+                        <p>"From zero coding knowledge to full-stack developer in 8 months. Kepler made it possible!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="Alex">
+                        </div>
+                        <div class="author-info">
+                            <h4>Alex Rodriguez</h4>
+                            <div class="achievement-badge">
+                                <i class="fas fa-code"></i>
+                                <span>Full Stack Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card magnetic-element">
+                    <div class="testimonial-content">
+                        <p>"The community support is amazing. Always someone to help when you're stuck!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face" alt="Priya">
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Patel</h4>
+                            <div class="achievement-badge">
+                                <i class="fas fa-star"></i>
+                                <span>Top Performer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Community Links -->
+            <div class="community-links">
+                <a href="#" class="community-link magnetic-element">
+                    <i class="fab fa-discord"></i>
+                    <span>Join Discord</span>
+                </a>
+                <a href="#" class="community-link magnetic-element">
+                    <i class="fas fa-comments"></i>
+                    <span>Forum Discussions</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kepler Path Section -->
+    <section class="kepler-path parallax-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Kepler Learning Journey</h2>
+                <p class="section-subtitle">Your gamified path to coding mastery</p>
+            </div>
+            
+            <div class="path-container">
+                <div class="path-step magnetic-element" data-step="1">
+                    <div class="step-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>🚧 Lay the Foundation</h3>
+                        <p>Master coding basics and programming fundamentals</p>
+                    </div>
+                    <div class="step-progress">
+                        <div class="progress-ring">
+                            <div class="progress-circle" data-progress="25"></div>
+                        </div>
+                        <span class="step-number">1</span>
+                    </div>
+                </div>
+                
+                <div class="path-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-glow"></div>
+                </div>
+                
+                <div class="path-step magnetic-element" data-step="2">
+                    <div class="step-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>⚙️ Master the Craft</h3>
+                        <p>Advanced DSA, system design, and project building</p>
+                    </div>
+                    <div class="step-progress">
+                        <div class="progress-ring">
+                            <div class="progress-circle" data-progress="50"></div>
+                        </div>
+                        <span class="step-number">2</span>
+                    </div>
+                </div>
+                
+                <div class="path-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-glow"></div>
+                </div>
+                
+                <div class="path-step magnetic-element" data-step="3">
+                    <div class="step-icon">
+                        <i class="fas fa-target"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>🎯 Showcase & Apply</h3>
+                        <p>Build portfolio, optimize resume, and GitHub profile</p>
+                    </div>
+                    <div class="step-progress">
+                        <div class="progress-ring">
+                            <div class="progress-circle" data-progress="75"></div>
+                        </div>
+                        <span class="step-number">3</span>
+                    </div>
+                </div>
+                
+                <div class="path-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-glow"></div>
+                </div>
+                
+                <div class="path-step magnetic-element" data-step="4">
+                    <div class="step-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>💼 Land Internships</h3>
+                        <p>Interview preparation and job placement support</p>
+                    </div>
+                    <div class="step-progress">
+                        <div class="progress-ring">
+                            <div class="progress-circle" data-progress="100"></div>
+                        </div>
+                        <span class="step-number">4</span>
                     </div>
                 </div>
             </div>
@@ -400,30 +506,28 @@
     <section class="cta-section parallax-section">
         <div class="container">
             <div class="cta-content">
-                <div class="cta-text">
-                    <h2 class="parallax-text">Ready to Transform Your Future?</h2>
-                    <p class="parallax-text">Join 50,000+ developers who chose Kepler to accelerate their coding careers</p>
-                    <div class="cta-benefits">
-                        <div class="benefit fade-in-left">
-                            <i class="fas fa-check"></i>
-                            <span>30-day money-back guarantee</span>
-                        </div>
-                        <div class="benefit fade-in-left">
-                            <i class="fas fa-check"></i>
-                            <span>Lifetime access to content</span>
-                        </div>
-                        <div class="benefit fade-in-left">
-                            <i class="fas fa-check"></i>
-                            <span>1-on-1 mentor sessions</span>
-                        </div>
-                    </div>
+                <div class="cta-logo">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/mochi-4436f.firebasestorage.app/o/kepler%20logo.jpg?alt=media&token=7df41f3c-26f2-4596-850c-d81538dc86dfuse" alt="Kepler Logo" />
                 </div>
-                <div class="cta-action">
-                    <button class="btn btn-cta magnetic-btn">
-                        <span>Start Your Journey</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                    <p class="cta-note">No credit card required • Start with free courses</p>
+                <h2>Ready to Launch Your Coding Journey?</h2>
+                <p>Join thousands of learners building their future with Kepler</p>
+                <button class="btn btn-cta magnetic-btn">
+                    <span>Sign Up Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Free to start</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-check"></i>
+                        <span>No credit card required</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Cancel anytime</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -435,9 +539,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <div class="custom-logo">
-                            <img src="https://drive.google.com/uc?export=view&id=11JOmMoOkwinR6ExsXSCAMMK2sQ2j8xT7" alt="Kepler Logo" />
-                        </div>
+                        <img src="https://firebasestorage.googleapis.com/v0/b/mochi-4436f.firebasestorage.app/o/kepler%20logo.jpg?alt=media&token=7df41f3c-26f2-4596-850c-d81538dc86dfuse" alt="Kepler Logo" class="footer-logo-img" />
                         <span>Kepler</span>
                     </div>
                     <p>Empowering the next generation of coders with cutting-edge technology and personalized learning experiences.</p>
